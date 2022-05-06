@@ -1,44 +1,41 @@
 package aut.utcluj.isp.ex4;
 
 public class SalaryInfo {
+
     private Double totalRevenue;
     private Double monthlyRevenue;
 
-    /**
-     * If is not positive, an {@link NegativeAmountException} exception should be thrown
-     *
-     * @param monthlyRevenue
-     */
-    public SalaryInfo(Double monthlyRevenue) {
-        this.monthlyRevenue = monthlyRevenue;
+    public SalaryInfo(Double monthlyRevenue) throws Exception {
+        if (monthlyRevenue > 0) {
+            this.monthlyRevenue = monthlyRevenue;
+            this.totalRevenue = 0d;
+        } else {
+            throw new NegativeAmountException("The amount of money can't be negative");
+        }
     }
 
-    /**
-     * Add incoming salary to total revenue
-     */
     public void addSalary() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        totalRevenue = totalRevenue + monthlyRevenue;
     }
 
-    /**
-     * Add certain amount of money as bonus
-     * If is not positive, an {@link NegativeAmountException} exception should be thrown
-     *
-     * @param value - money to be added
-     */
-    public void addMoney(final Double value) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void addMoney(final Double value) throws Exception {
+        if (value > 0) {
+            this.totalRevenue = totalRevenue + value;
+        } else {
+            throw new NegativeAmountException("The amount of money can't be negative");
+        }
     }
 
-    /**
-     * Pay certain amount of money as tax
-     * If is not positive, an {@link NegativeAmountException} exception should be thrown
-     * If not enough revenue found, an {@link NegativeBalanceException } exception should be thrown
-     *
-     * @param value - value to be paid
-     */
-    public void payTax(final Double value) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void payTax(final Double value) throws Exception {
+        if (value.compareTo(totalRevenue) < 0) {
+            if (value > 0) {
+                this.totalRevenue = totalRevenue - value;
+            } else {
+                throw new NegativeAmountException("The amount of money can't be negative");
+            }
+        } else {
+            throw new NegativeBalanceException("You don't have enough money for this transaction.");
+        }
     }
 
     public Double getTotalRevenue() {
@@ -48,4 +45,13 @@ public class SalaryInfo {
     public Double getMonthlyRevenue() {
         return monthlyRevenue;
     }
+
+    public void setTotalRevenue(Double totalRevenue) {
+        this.totalRevenue = totalRevenue;
+    }
+
+    public void setMonthlyRevenue(Double monthlyRevenue) {
+        this.monthlyRevenue = monthlyRevenue;
+    }
+
 }
