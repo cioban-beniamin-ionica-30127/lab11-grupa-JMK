@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DESKTOP-5TP8QKG" name="aut.utcluj.isp.ex1.PersonTest" skipped="0" tests="2" time="0.188" timestamp="2022-05-06T10:18:03">
+<testsuite errors="0" failures="0" hostname="DESKTOP-5TP8QKG" name="aut.utcluj.isp.ex3.EmployeeControllerTest" skipped="0" tests="5" time="0.153" timestamp="2022-05-06T10:47:04">
   <properties>
     <property name="libs.spring-framework300.classpath" value="C:\Program Files\NetBeans-12.6\netbeans\platform\modules\org-apache-commons-logging.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\cglib-2.2.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-aop-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-aspects-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-beans-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-context-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-context-support-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-core-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-expression-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-instrument-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-instrument-tomcat-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-jdbc-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-jms-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-orm-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-oxm-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-struts-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-test-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-tx-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-web-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-webmvc-3.2.18.RELEASE.jar;C:\Program Files\NetBeans-12.6\netbeans\java\modules\ext\spring-3.0\spring-webmvc-portlet-3.2.18.RELEASE.jar" />
     <property name="javac.test.classpath" value="C:\Program Files\NetBeans-12.6\netbeans\platform\modules\ext\hamcrest-core-1.3.jar:C:\Program Files\NetBeans-12.6\netbeans\platform\modules\ext\junit-4.13.2.jar:build/classes" />
@@ -18,7 +18,7 @@
     <property name="ant.file.type.colocviu-demo-impl" value="file" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.14\bin" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner aut.utcluj.isp.ex1.PersonTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\andre\Desktop\cursuri\ISP\lab11-grupa-JMK\c3-samples\build\test\results\TEST-aut.utcluj.isp.ex1.PersonTest.xml crashfile=C:\Users\andre\Desktop\cursuri\ISP\lab11-grupa-JMK\c3-samples\build\junitvmwatcher16776732009545511937.properties propsfile=C:\Users\andre\Desktop\cursuri\ISP\lab11-grupa-JMK\c3-samples\build\junit250369021942578099.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner aut.utcluj.isp.ex3.EmployeeControllerTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\andre\Desktop\cursuri\ISP\lab11-grupa-JMK\c3-samples\build\test\results\TEST-aut.utcluj.isp.ex3.EmployeeControllerTest.xml crashfile=C:\Users\andre\Desktop\cursuri\ISP\lab11-grupa-JMK\c3-samples\build\junitvmwatcher13398747736876018144.properties propsfile=C:\Users\andre\Desktop\cursuri\ISP\lab11-grupa-JMK\c3-samples\build\junit4476281643448017613.properties" />
     <property name="jdk.debug" value="release" />
     <property name="libs.spring-framework300.src" value="" />
     <property name="javadoc.use" value="true" />
@@ -61,7 +61,7 @@
     <property name="meta.inf.dir" value="${src.dir}/META-INF" />
     <property name="libs.testng.maven-pom" value="" />
     <property name="org.openide.version" value="deprecated" />
-    <property name="test.includes" value="aut/utcluj/isp/ex1/PersonTest.java" />
+    <property name="test.includes" value="aut/utcluj/isp/ex3/EmployeeControllerTest.java" />
     <property name="run.classpath" value="C:\Program Files\NetBeans-12.6\netbeans\platform\modules\ext\hamcrest-core-1.3.jar:C:\Program Files\NetBeans-12.6\netbeans\platform\modules\ext\junit-4.13.2.jar:build/classes" />
     <property name="libs.jaxb.src" value="" />
     <property name="sun.awt.enableExtraMouseButtons" value="true" />
@@ -195,7 +195,7 @@
     <property name="libs.jsp-compilation-syscp.classpath" value="C:\Program Files\NetBeans-12.6\netbeans\extide\ant\lib\ant.jar;C:\Program Files\NetBeans-12.6\netbeans\enterprise\modules\ext\servlet3.1-jsp2.3-api.jar;C:\Program Files\NetBeans-12.6\netbeans\enterprise\modules\ext\glassfish-jspparser-4.0.jar;C:\Program Files\NetBeans-12.6\netbeans\enterprise\modules\ext\jstl-impl.jar;C:\Program Files\NetBeans-12.6\netbeans\enterprise\modules\ext\jsf-2_2\javax.faces.jar" />
     <property name="libs.jsp-compilation.classpath" value="C:\Program Files\NetBeans-12.6\netbeans\extide\ant\lib\ant.jar;C:\Program Files\NetBeans-12.6\netbeans\enterprise\modules\ext\servlet3.1-jsp2.3-api.jar;C:\Program Files\NetBeans-12.6\netbeans\enterprise\modules\ext\glassfish-jspparser-4.0.jar;C:\Program Files\NetBeans-12.6\netbeans\enterprise\modules\ext\jsf-2_2\javax.faces.jar;C:\Program Files\NetBeans-12.6\netbeans\enterprise\modules\ext\jstl-api.jar;C:\Program Files\NetBeans-12.6\netbeans\extide\ant\lib\ant-launcher.jar" />
     <property name="libs.javaee-api-6.0.classpath" value="C:\Program Files\NetBeans-12.6\netbeans\enterprise\modules\ext\javaee-api-6.0.jar" />
-    <property name="javac.includesfile.binary" value="C:\Users\andre\Desktop\cursuri\ISP\lab11-grupa-JMK\c3-samples\null1436869674" />
+    <property name="javac.includesfile.binary" value="C:\Users\andre\Desktop\cursuri\ISP\lab11-grupa-JMK\c3-samples\null246841942" />
     <property name="libs.javaee-api-7.0.classpath" value="C:\Program Files\NetBeans-12.6\netbeans\enterprise\modules\ext\javaee-api-7.0.jar" />
     <property name="sun.cpu.isalist" value="amd64" />
     <property name="libs.restapi.maven-pom" value="" />
@@ -312,7 +312,7 @@
     <property name="netbeans.autoupdate.version" value="1.23" />
     <property name="empty.dir" value="C:\Users\andre\Desktop\cursuri\ISP\lab11-grupa-JMK\c3-samples\build\empty" />
     <property name="netbeans.user" value="C:\Users\andre\AppData\Roaming\NetBeans\12.6" />
-    <property name="javac.includes.binary" value="C:\Users\andre\Desktop\cursuri\ISP\lab11-grupa-JMK\c3-samples\build\test\classes\aut\utcluj\isp\ex1\PersonTest.class" />
+    <property name="javac.includes.binary" value="C:\Users\andre\Desktop\cursuri\ISP\lab11-grupa-JMK\c3-samples\build\test\classes\aut\utcluj\isp\ex3\EmployeeControllerTest.class" />
     <property name="file.separator" value="\" />
     <property name="line.separator" value="&#xd;&#xa;" />
     <property name="javadoc.additionalparam" value="" />
@@ -348,7 +348,7 @@
     <property name="javac.modulepath" value="" />
     <property name="libs.javaee-api-6.0.src" value="" />
     <property name="user.properties.file" value="C:\Users\andre\AppData\Roaming\NetBeans\12.6\build.properties" />
-    <property name="javac.includes" value="aut/utcluj/isp/ex1/PersonTest.java" />
+    <property name="javac.includes" value="aut/utcluj/isp/ex3/EmployeeControllerTest.java" />
     <property name="netbeans.autoupdate.country" value="US" />
     <property name="java.class.path" value="C:\Program Files\NetBeans-12.6\netbeans\platform\modules\ext\hamcrest-core-1.3.jar;C:\Program Files\NetBeans-12.6\netbeans\platform\modules\ext\junit-4.13.2.jar;C:\Users\andre\Desktop\cursuri\ISP\lab11-grupa-JMK\c3-samples\build\classes;C:\Users\andre\Desktop\cursuri\ISP\lab11-grupa-JMK\c3-samples\build\test\classes;C:\Program Files\NetBeans-12.6\netbeans\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans-12.6\netbeans\extide\ant\lib\ant.jar;C:\Program Files\NetBeans-12.6\netbeans\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans-12.6\netbeans\extide\ant\lib\ant-junit4.jar" />
     <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
@@ -400,7 +400,7 @@
     <property name="libs.metro.javadoc" value="C:\Program Files\NetBeans-12.6\netbeans\enterprise\docs\webservices-api-javadoc.jar;C:\Program Files\NetBeans-12.6\netbeans\enterprise\docs\webservices-extra-javadoc.jar;C:\Program Files\NetBeans-12.6\netbeans\enterprise\docs\webservices-extra-api-javadoc.jar;C:\Program Files\NetBeans-12.6\netbeans\enterprise\docs\webservices-rt-javadoc.jar;C:\Program Files\NetBeans-12.6\netbeans\enterprise\docs\webservices-tools-javadoc.jar" />
     <property name="libs.jakartaee-web-api-9.0.src" value="" />
     <property name="sun.awt.datatransfer.timeout" value="1000" />
-    <property name="test.class" value="aut.utcluj.isp.ex1.PersonTest" />
+    <property name="test.class" value="aut.utcluj.isp.ex3.EmployeeControllerTest" />
     <property name="libs.javaee-web-api-7.0.src" value="" />
     <property name="libs.jsp-compiler.classpath" value="C:\Program Files\NetBeans-12.6\netbeans\enterprise\ant\extra\jspcompile.jar" />
     <property name="annotation.processing.run.all.processors" value="true" />
@@ -408,8 +408,13 @@
     <property name="libs.jakartaee-api-8.0.src" value="" />
     <property name="libs.javaee-endorsed-api-6.0.classpath" value="C:\Program Files\NetBeans-12.6\netbeans\enterprise\modules\ext\javaee6-endorsed\javax.annotation.jar;C:\Program Files\NetBeans-12.6\netbeans\enterprise\modules\ext\javaee6-endorsed\jaxb-api-osgi.jar;C:\Program Files\NetBeans-12.6\netbeans\enterprise\modules\ext\javaee6-endorsed\webservices-api-osgi.jar" />
   </properties>
-  <testcase classname="aut.utcluj.isp.ex1.PersonTest" name="testPersonEquals" time="0.003" />
-  <testcase classname="aut.utcluj.isp.ex1.PersonTest" name="testCreate" time="0.001" />
-  <system-out><![CDATA[]]></system-out>
+  <testcase classname="aut.utcluj.isp.ex3.EmployeeControllerTest" name="testGetEmployees" time="0.004" />
+  <testcase classname="aut.utcluj.isp.ex3.EmployeeControllerTest" name="testAddEmployee" time="0.001" />
+  <testcase classname="aut.utcluj.isp.ex3.EmployeeControllerTest" name="testGetEmployeeByCnp" time="0.001" />
+  <testcase classname="aut.utcluj.isp.ex3.EmployeeControllerTest" name="testDeleteEmployeeByCnp" time="0.001" />
+  <testcase classname="aut.utcluj.isp.ex3.EmployeeControllerTest" name="testUpdateEmployeeSalaryByCnp" time="0.001" />
+  <system-out><![CDATA[There is no employee with this cnp
+There is no employee with this cnp
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

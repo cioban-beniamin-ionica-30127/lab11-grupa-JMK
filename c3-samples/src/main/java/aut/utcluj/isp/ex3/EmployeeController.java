@@ -1,66 +1,61 @@
 package aut.utcluj.isp.ex3;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author stefan
  */
 public class EmployeeController {
-    /**
-     * Add new employee to the list of employees
-     *
-     * @param employee - employee information
-     */
+
+    List<Employee> employees = new ArrayList<>();
+
+    public EmployeeController() {
+    }
+
     public void addEmployee(final Employee employee) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        if (!employees.contains(employee)) {
+            employees.add(employee);
+        }
     }
 
-    /**
-     * Get employee by cnp
-     *
-     * @param cnp - unique cnp
-     * @return found employee or null if not found
-     */
     public Employee getEmployeeByCnp(final String cnp) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        for (Employee e : employees) {
+            if (e.getCnp().equals(cnp)) {
+                return e;
+            }
+        }
+
+        System.out.println("There is no employee with this cnp");
+        return null;
     }
 
-    /**
-     * Update employee salary by cnp
-     *
-     * @param cnp    - unique cnp
-     * @param salary - salary
-     * @return updated employee
-     */
     public Employee updateEmployeeSalaryByCnp(final String cnp, final Double salary) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        for (Employee e : employees) {
+            if (e.getCnp().equals(cnp)) {
+                e.setSalary(salary);
+                return e;
+            }
+        }
+        return null;
     }
 
-    /**
-     * Delete employee by cnp
-     *
-     * @param cnp - unique cnp
-     * @return deleted employee or null if not found
-     */
     public Employee deleteEmployeeByCnp(final String cnp) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        for (Employee e : employees) {
+            if (e.getCnp().equals(cnp)) {
+                employees.remove(e);
+                return e;
+            }
+        }
+        return null;
     }
 
-    /**
-     * Return current list of employees
-     *
-     * @return current list of employees
-     */
     public List<Employee> getEmployees() {
-        throw new UnsupportedOperationException("Not supported yet.");
+
+        return employees;
     }
 
-    /**
-     * Get number of employees
-     *
-     * @return - number of registered employees
-     */
     public int getNumberOfEmployees() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return employees.size();
     }
 }
