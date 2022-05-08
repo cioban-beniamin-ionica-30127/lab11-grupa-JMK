@@ -75,11 +75,6 @@ public class EmployeeControllerJFrame extends javax.swing.JFrame {
         jLabel4.setText("jLabel4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                formFocusGained(evt);
-            }
-        });
         addWindowFocusListener(new java.awt.event.WindowFocusListener() {
             public void windowGainedFocus(java.awt.event.WindowEvent evt) {
                 formWindowGainedFocus(evt);
@@ -226,11 +221,6 @@ public class EmployeeControllerJFrame extends javax.swing.JFrame {
         MonthlySalaryField.setEditable(false);
 
         TotalSalaryField.setEditable(false);
-        TotalSalaryField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TotalSalaryFieldActionPerformed(evt);
-            }
-        });
 
         UpdateSalaryButton.setBackground(new java.awt.Color(214, 218, 239));
         UpdateSalaryButton.setFont(new java.awt.Font("Swis721 LtCn BT", 1, 18)); // NOI18N
@@ -520,10 +510,6 @@ public class EmployeeControllerJFrame extends javax.swing.JFrame {
 
     }//GEN-LAST:event_AddEmployeeButtonActionPerformed
 
-    private void TotalSalaryFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TotalSalaryFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TotalSalaryFieldActionPerformed
-
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         JTable source = (JTable) evt.getSource();
         int row = source.rowAtPoint(evt.getPoint());
@@ -599,23 +585,22 @@ public class EmployeeControllerJFrame extends javax.swing.JFrame {
 
     }//GEN-LAST:event_EmployeeButtonMouseClicked
 
-    private void formFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_formFocusGained
-
-    }//GEN-LAST:event_formFocusGained
-
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
         if (active == true) {
             employee = employeeAccount.sendInfo();
+            try {
+                if (!employee.getFirstName().isEmpty()) {
+                    this.EmployeePanel.setVisible(true);
+                    this.ChoosingPhasePanel.setVisible(false);
+                    active = false;
+                    this.FirstNameField1.setText(employee.getFirstName());
+                    this.LastNameField1.setText(employee.getLastName());
+                    this.CNPField1.setText(employee.getCnp());
+                    this.MonthlySalaryField1.setText(employee.getSalaryInfo().getMonthlyRevenue() + "");
+                    this.TotalSalaryField1.setText(employee.getSalaryInfo().getTotalRevenue() + "");
+                }
+            } catch (Exception ex) {
 
-            if (!employee.getFirstName().isEmpty()) {
-                this.EmployeePanel.setVisible(true);
-                this.ChoosingPhasePanel.setVisible(false);
-                active = false;
-                this.FirstNameField1.setText(employee.getFirstName());
-                this.LastNameField1.setText(employee.getLastName());
-                this.CNPField1.setText(employee.getCnp());
-                this.MonthlySalaryField1.setText(employee.getSalaryInfo().getMonthlyRevenue() + "");
-                this.TotalSalaryField1.setText(employee.getSalaryInfo().getTotalRevenue() + "");
             }
         }
     }//GEN-LAST:event_formWindowGainedFocus
