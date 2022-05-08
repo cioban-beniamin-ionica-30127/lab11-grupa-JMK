@@ -37,5 +37,18 @@ public class Employee {
     public void setSalary(Double salary) {
         this.salary = salary;
     }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setCnp(String cnp) {
+        this.cnp = cnp;
+    }
+    
     
 }

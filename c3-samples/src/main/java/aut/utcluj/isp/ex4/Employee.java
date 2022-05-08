@@ -1,14 +1,14 @@
 package aut.utcluj.isp.ex4;
 
-/**
- * @author stefan
- */
 public class Employee implements IdentityManager {
 
     private String firstName;
     private String lastName;
     private String cnp;
     private SalaryInfo employeeSalaryInfo;
+
+    public Employee() {
+    }
 
     public Employee(String firstName, String lastName, String cnp, Double salary) {
         this.firstName = firstName;
@@ -43,11 +43,10 @@ public class Employee implements IdentityManager {
         }
     }
 
-    public void payTax(final Double tax) {
-        try {
-            this.employeeSalaryInfo.payTax(tax);
-        } catch (Exception ex) {
-        }
+    public void payTax(final Double tax) throws Exception {
+
+        this.employeeSalaryInfo.payTax(tax);
+
     }
 
     public SalaryInfo getSalaryInfo() {
@@ -57,6 +56,22 @@ public class Employee implements IdentityManager {
     @Override
     public String getIdentity() {
         return this.firstName + "_" + this.lastName + "_" + this.cnp;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setCnp(String cnp) {
+        this.cnp = cnp;
+    }
+
+    public void setEmployeeSalaryInfo(SalaryInfo employeeSalaryInfo) {
+        this.employeeSalaryInfo = employeeSalaryInfo;
     }
 
 }

@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class EmployeeController {
 
-    List<Employee> employees = new ArrayList<>();
+     private List<Employee> employees = new ArrayList<>();
 
     public EmployeeController() {
     }
@@ -58,4 +58,5 @@ public class EmployeeController {
     public int getNumberOfEmployees() {
         return employees.size();
     }
+
 }
