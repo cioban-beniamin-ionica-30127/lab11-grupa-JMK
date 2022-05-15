@@ -16,7 +16,7 @@ public class Employee implements IdentityManager {
         this.cnp = cnp;
         try {
             this.employeeSalaryInfo = new SalaryInfo(salary);
-        } catch (Exception ex) {
+        } catch (NegativeAmountException ex) {
         }
     }
 
@@ -36,11 +36,10 @@ public class Employee implements IdentityManager {
         this.employeeSalaryInfo.addSalary();
     }
 
-    public void addMoney(final Double money) {
-        try {
+    public void addMoney(final Double money) throws NegativeAmountException {
+        
             this.employeeSalaryInfo.addMoney(money);
-        } catch (Exception ex) {
-        }
+        
     }
 
     public void payTax(final Double tax) throws Exception {

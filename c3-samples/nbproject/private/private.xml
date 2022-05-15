@@ -5,14 +5,17 @@
         <group>
             <file>file:/C:/Users/andre/Desktop/cursuri/ISP/lab11-grupa-JMK/c3-samples/src/main/java/aut/utcluj/isp/ex4/AddEmployeeJFrame.java</file>
             <file>file:/C:/Users/andre/Desktop/cursuri/ISP/lab11-grupa-JMK/c3-samples/src/main/java/aut/utcluj/isp/ex4/IdentityManager.java</file>
+            <file>file:/C:/Users/andre/Desktop/cursuri/ISP/lab11-grupa-JMK/c3-samples/src/main/java/aut/utcluj/isp/ex4/EmployeeAccountJFrame.java</file>
+            <file>file:/C:/Users/andre/Desktop/cursuri/ISP/lab11-grupa-JMK/c3-samples/src/main/java/aut/utcluj/isp/ex4/EmployeeController.java</file>
+            <file>file:/C:/Users/andre/Desktop/cursuri/ISP/lab11-grupa-JMK/c3-samples/src/main/java/aut/utcluj/isp/ex4/EmployeeControllerJFrame.java</file>
             <file>file:/C:/Users/andre/Desktop/cursuri/ISP/lab11-grupa-JMK/c3-samples/src/main/java/aut/utcluj/isp/ex3/Employee.java</file>
             <file>file:/C:/Users/andre/Desktop/cursuri/ISP/lab11-grupa-JMK/c3-samples/src/test/java/aut/utcluj/isp/ex4/SalaryInfoTest.java</file>
             <file>file:/C:/Users/andre/Desktop/cursuri/ISP/lab11-grupa-JMK/c3-samples/src/main/java/aut/utcluj/isp/ex3/EmployeeController.java</file>
-            <file>file:/C:/Users/andre/Desktop/cursuri/ISP/lab11-grupa-JMK/c3-samples/src/main/java/aut/utcluj/isp/ex4/EmployeeController.java</file>
             <file>file:/C:/Users/andre/Desktop/cursuri/ISP/lab11-grupa-JMK/c3-samples/src/main/java/aut/utcluj/isp/ex4/Employee.java</file>
-            <file>file:/C:/Users/andre/Desktop/cursuri/ISP/lab11-grupa-JMK/c3-samples/src/main/java/aut/utcluj/isp/ex4/EmployeeControllerJFrame.java</file>
             <file>file:/C:/Users/andre/Desktop/cursuri/ISP/lab11-grupa-JMK/c3-samples/src/main/java/aut/utcluj/isp/ex4/SalaryInfo.java</file>
             <file>file:/C:/Users/andre/Desktop/cursuri/ISP/lab11-grupa-JMK/c3-samples/src/main/java/aut/utcluj/isp/ex4/NegativeAmountException.java</file>
+            <file>file:/C:/Users/andre/Desktop/cursuri/ISP/lab11-grupa-JMK/c3-samples/src/main/java/aut/utcluj/isp/ex4/NegativeBalanceException.java</file>
+            <file>file:/C:/Users/andre/Desktop/cursuri/ISP/lab11-grupa-JMK/c3-samples/src/test/java/aut/utcluj/isp/ex4/EmployeeTest.java</file>
         </group>
     </open-files>
 </project-private>

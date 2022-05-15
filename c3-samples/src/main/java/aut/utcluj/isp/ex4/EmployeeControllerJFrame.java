@@ -9,15 +9,17 @@ import javax.swing.JTable;
 
 public class EmployeeControllerJFrame extends javax.swing.JFrame {
 
-    private String password = "1234";
-    private EmployeeController controller;
+    private final String password = "1234";
+    private final EmployeeController controller;
     private Employee employee;
     private EmployeeAccountJFrame employeeAccount;
     private boolean active;
 
     public EmployeeControllerJFrame() {
         controller = new EmployeeController();
-        controller.getEmployees().add(new Employee("john", "mayer", "12345", 300d));
+        controller.getEmployees().add(new Employee("John", "Mayer", "12345", 300d));
+        controller.getEmployees().add(new Employee("Alex", "Russo", "123456", 250d));
+        controller.getEmployees().add(new Employee("Justin", "Timberlake", "1234567", 500d));
         active = false;
         initComponents();
 
@@ -542,6 +544,8 @@ public class EmployeeControllerJFrame extends javax.swing.JFrame {
         } catch (NullPointerException ex) {
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(this, "You can introduce only numbers in this field.", " ", JOptionPane.ERROR_MESSAGE);
+        } catch (NegativeAmountException ex) {
+            JOptionPane.showMessageDialog(this, ex.getMessage(), " ", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_UpdateSalaryButtonMouseClicked
 
@@ -553,6 +557,8 @@ public class EmployeeControllerJFrame extends javax.swing.JFrame {
         } catch (NullPointerException ex) {
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(this, "You can introduce only numbers in this field.", " ", JOptionPane.ERROR_MESSAGE);
+        } catch (NegativeAmountException ex) {
+            JOptionPane.showMessageDialog(this, ex.getMessage(), " ", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_AddBonusButtonMouseClicked
 

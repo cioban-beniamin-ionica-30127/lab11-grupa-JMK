@@ -1,12 +1,14 @@
 package aut.utcluj.isp.ex4;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class SalaryInfoTest {
     @Test
-    public void testCreate() {
+    public void testCreate() throws NegativeAmountException {
         final SalaryInfo salaryInfo = new SalaryInfo(300d);
         assertNotNull("Salary object cannot be null", salaryInfo);
         assertEquals("Revenue is 0", Double.valueOf(0d), salaryInfo.getTotalRevenue());
@@ -14,12 +16,13 @@ public class SalaryInfoTest {
     }
 
     @Test(expected = NegativeAmountException.class)
-    public void testCreateShouldThrowExceptionWhenMonthlyRevenueIsNegative() {
-        new SalaryInfo(-300d);
+    public void testCreateShouldThrowExceptionWhenMonthlyRevenueIsNegative() throws NegativeAmountException {
+             new SalaryInfo(-300d);
+       
     }
 
     @Test
-    public void testAddSalary() {
+    public void testAddSalary() throws NegativeAmountException {
         final SalaryInfo salaryInfo = new SalaryInfo(300d);
         assertNotNull("Salary object cannot be null", salaryInfo);
         assertEquals("Revenue is 0", Double.valueOf(0d), salaryInfo.getTotalRevenue());
@@ -33,7 +36,7 @@ public class SalaryInfoTest {
     }
 
     @Test
-    public void testAddMoney() {
+    public void testAddMoney() throws NegativeAmountException {
         final SalaryInfo salaryInfo = new SalaryInfo(300d);
         assertNotNull("Salary object cannot be null", salaryInfo);
         assertEquals("Revenue is 0", Double.valueOf(0d), salaryInfo.getTotalRevenue());
@@ -44,7 +47,7 @@ public class SalaryInfoTest {
     }
 
     @Test(expected = NegativeAmountException.class)
-    public void testAddMoneyShouldThrowExceptionWhenValueIsNegative() {
+    public void testAddMoneyShouldThrowExceptionWhenValueIsNegative() throws NegativeAmountException, Exception {
         final SalaryInfo salaryInfo = new SalaryInfo(300d);
         assertNotNull("Salary object cannot be null", salaryInfo);
         assertEquals("Revenue is 0", Double.valueOf(0d), salaryInfo.getTotalRevenue());
@@ -54,7 +57,7 @@ public class SalaryInfoTest {
     }
 
     @Test
-    public void testPayTax() {
+    public void testPayTax() throws NegativeAmountException, NegativeBalanceException {
         final SalaryInfo salaryInfo = new SalaryInfo(300d);
         salaryInfo.addSalary();
 
@@ -64,13 +67,13 @@ public class SalaryInfoTest {
     }
 
     @Test(expected = NegativeAmountException.class)
-    public void testPayTaxShouldThrowExceptionWhenTaxIsNegative() {
+    public void testPayTaxShouldThrowExceptionWhenTaxIsNegative() throws NegativeAmountException, Exception {
         final SalaryInfo salaryInfo = new SalaryInfo(300d);
         salaryInfo.payTax(-100d);
     }
 
     @Test(expected = NegativeBalanceException.class)
-    public void testPayTaxShouldThrowExceptionWhenNoEnoughMoneyFound() {
+    public void testPayTaxShouldThrowExceptionWhenNoEnoughMoneyFound() throws NegativeAmountException, Exception {
         final SalaryInfo salaryInfo = new SalaryInfo(300d);
         salaryInfo.payTax(100d);
     }

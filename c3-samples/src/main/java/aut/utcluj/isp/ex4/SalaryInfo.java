@@ -5,7 +5,7 @@ public class SalaryInfo {
     private Double totalRevenue;
     private Double monthlyRevenue;
 
-    public SalaryInfo(Double monthlyRevenue) throws Exception {
+    public SalaryInfo(Double monthlyRevenue) throws NegativeAmountException {
         if (monthlyRevenue > 0) {
             this.monthlyRevenue = monthlyRevenue;
             this.totalRevenue = 0d;
@@ -18,7 +18,7 @@ public class SalaryInfo {
         totalRevenue = totalRevenue + monthlyRevenue;
     }
 
-    public void addMoney(final Double value) throws Exception {
+    public void addMoney(final Double value) throws NegativeAmountException {
         if (value > 0) {
             this.totalRevenue = totalRevenue + value;
         } else {
@@ -26,7 +26,7 @@ public class SalaryInfo {
         }
     }
 
-    public void payTax(final Double value) throws Exception {
+    public void payTax(final Double value) throws NegativeAmountException,NegativeBalanceException {
         if (value.compareTo(totalRevenue) < 0) {
             if (value > 0) {
                 this.totalRevenue = totalRevenue - value;

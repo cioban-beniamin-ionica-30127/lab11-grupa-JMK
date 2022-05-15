@@ -37,7 +37,8 @@ public class EmployeeController extends AbstractTableModel {
         return null;
     }
 
-    public Employee updateEmployeeSalaryByCnp(final String cnp, final Double salary) {
+    public Employee updateEmployeeSalaryByCnp(final String cnp, final Double salary) throws NegativeAmountException {
+       if(salary<0) throw new NegativeAmountException("The amount of money can't be negative");
         for (Employee e : employees) {
             if (e.getCnp().equals(cnp)) {
                 e.getSalaryInfo().setMonthlyRevenue(salary);
