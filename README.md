@@ -27,7 +27,11 @@ Avaliable employee accounts:
 
 
 The people who worked on this project:
+
 Banculea Andreea
+
 Cioban Beniamin
+
 Dulcu Raul
+
 Mureșan Adelina
