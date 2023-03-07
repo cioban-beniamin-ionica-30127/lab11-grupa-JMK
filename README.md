@@ -34,4 +34,3 @@ Cioban Beniamin
 
 Dulcu Raul
 
-Mureșan Adelina
